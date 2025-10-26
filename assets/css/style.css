@@ -1,20 +1,10 @@
 @charset "UTF-8";
+
+/*****************************
+共通スタイル
+*****************************/
 html {
   font-size: 100%;
-}
-header {
-  display: flex;
-  position: fixed;
-  top: 30px;
-  left: 150px;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap: 650px;
-  
-}
-.logo img {
-  height: 150px;
-  width: 250px;
 }
 a {
   color: #ff8c00;             
@@ -25,12 +15,78 @@ a {
 a:hover {
   color: #d46f00;             
 }
+.text {
+  margin-top: 150px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/*****************************
+ヘッダーのスタイル
+*****************************/
+header {
+  display: flex;
+  position: fixed;
+  top: 30px;
+  left: 150px;
+  justify-content:space-between;
+  align-items:flex-end;
+  gap: 650px;
+}
+.logo img {
+  height: 150px;
+  width: 250px;
+}
+/****************************
+ハンバーガーメニューのスタイル
+*****************************/
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+}
+.hamburger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #fe8602;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger span:nth-child(1) { top: 0; }
+
+.hamburger {
+  display: none; 
+}
+/******************************
+ボディ共通スタイル
+******************************/
 body {
   background-image: url(../img/background.png);
   color: #fe8602;
   font-family: 'YuGothic','Yu Gothic',sans-serif;
   text-shadow: 2px 2px 2px #ffffff;
 }
+
+/****************************
+フッターのスタイル
+****************************/
+.footer-inner {
+  font-size: 1.5rem;
+  color: #545454;
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+/*******************************
+メイン画像のスタイル
+*******************************/
 .mainvisual  {
   text-align: center;
 }
@@ -40,11 +96,11 @@ body {
   height: auto;
   padding-top: 160px;
 }
-.welcome {
-  text-align: center;
-  margin-top: 80px;
-}
-.access {
+
+/*******************************
+見出しのスタイル
+********************************/
+.welcome, .access {
   text-align: center;
   margin-top: 80px;
 }
@@ -54,6 +110,10 @@ body {
   margin: 50px;
   border-bottom: 2px solid #fe8602;
 }
+
+/*********************************
+ようこそCafeのスタイル
+*********************************/
 .welcome .img {
   margin-left: 660px;
 }
@@ -63,31 +123,138 @@ body {
 .welcome .img2 {
   margin-left: 180px;
 }
-.text {
-  margin-top: 150px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
+
+/********************************
+アクセスのスタイル
+*********************************/
 .access .flex {
   justify-content: center;
   gap: 100px;
 }
+.access .flex .text address a{
+  font-size: 1.2rem;
+}
+
+/********************************
+Googleマップのスタイル
+*********************************/
+.map {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 8px;   
+}
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/*******************************
+Menuへ移動するボタンのスタイル
+********************************/
 .to-menu {
   text-align: center;
   margin-top: 200px;
 }
-.footer-inner {
-  font-size: 1.5rem;
-  color: #545454;
-  text-align: center;
-  margin-top: 150px;
-  margin-bottom: 50px;
-}
-
 
 /*-----------------------------
 スマートフォン
 -------------------------------*/
 @media screen and (max-width: 767px){
+  header {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: static;
+  }
+  nav  {
+    display: none; 
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; left: 0; right: 0;
+    padding: 1rem;
+    border-top: 2px solid #fe8602;
+    text-align: center;
+    z-index: 10;
+  }
+  .nav-menu a {
+    font-size: 1.5rem;   
+  }
+  .nav-menu.active {
+    display: flex; 
+  }
+
+  .hamburger {
+    display: block; 
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+  }
   
+  .logo img {
+    height: 50px;
+    width: 100px;
+  }
+  .mainvisual img {
+  padding-top: 20px;
+  }
+  .welcome, .access {
+  margin-top: 100px;
+  }
+  .section-title {
+  margin: 10px;
+  font-size: 2rem;
+  }
+  .welcome .img {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .welcome .img2 {
+    margin-left: 0;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .text {
+  margin-top: 40px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  }
+.access .flex .text address a{
+  font-size: 1em;
+  }
+.map {
+  width: 100%;
+  height: 0;         
+  padding-top: 70%;  
+  }
+  .to-menu {
+    margin-top: 100px;
+  }
+  .to-menu a {
+    font-size: 1.5rem;
+  }
+  .footer-inner {
+  font-size: 1rem;
+  text-align: right;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  }
 }

@@ -12,19 +12,27 @@
       <!-- メインCSS -->
       <link rel="stylesheet" href="assets/css/style.css" />
       <link rel="icon" href="assets/img/favicon.png" >
+
+      <!-- JS -->
+      <script src="assets/js/main.js" defer></script>
     </head>
 
     <body>
       <!---------------------------- 
         header
       ------------------------------>
-      <header>
+      <header class="site-header" role="banner" aria-label="サイトヘッダー">
         <h1 class="logo">
-          <a href="index.html">
-            <img src="assets/img/logo.png" alt="Cafe">
+          <a href="./index.html">
+            <img src="assets/img/logo.png" alt="Cafe" loading="lazy">
           </a>
         </h1>
+        <nav class="nav-menu" aria-label="グローバルナビ">
         <a href="./menu.html">Menu</a>
+        </nav>
+        <button class="hamburger" aria-label="メニューを開閉">
+            <span></span><span></span>
+        </button>
       </header>
 
       <!----------------------------
@@ -36,7 +44,7 @@
         メイン画像
         ---------------------------->
         <section class="mainvisual">
-         <img src="assets/img/cafe1.jpg" alt="">
+         <img src="assets/img/cafe1.jpg" alt="木の外観が目印のCafeの外観" loading="lazy">
         </section>
 
         <!---------------------------
@@ -45,11 +53,11 @@
         <section class="welcome">
           <h2 class="section-title">Cafeへようこそ</h2>
           <div class="img">
-            <img src="assets/img/cafe2.jpg" alt="">
+            <img src="assets/img/cafe2.jpg" alt="レンガ造りの暖かい雰囲気の店内1" loading="lazy">
           </div>
           <div class="flex">
           <div class="img2">
-            <img src="assets/img/cafe3.jpg" alt="">
+            <img src="assets/img/cafe3.jpg" alt="レンガ造りの暖かい雰囲気の店内2" loading="lazy">
           </div>
           <div class="text">
             <p class="description">街角の小さな隠れ家カフェ。<br>
@@ -66,15 +74,17 @@
           <h2 class="section-title">アクセス</h2>
           <div class="flex">
           <div class="text">
-            <p class="description">〒170-8630<br>
+            <address>
+            〒170-8630<br>
             東京都豊島区東池袋<br>
             3丁目1-1 サンシャインシティ<br>
-            電話番号: 03-1234-5678<br>
+            電話番号:<a href="tel:03-1234-5678">03-1234-5678</a><br>
             営業時間: 10:00 - 20:00<br>
-            定休日: 水曜日</p>
+            定休日: 水曜日
+            </address>
           </div>
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.887905850671!2d139.71696657525268!3d35.72897522735061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f134fd653%3A0x51eb1d42c77222c2!2z44K144Oz44K344Oj44Kk44Oz44K344OG44Kj!5e0!3m2!1sja!2sjp!4v1761291276852!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.887905850671!2d139.71696657525268!3d35.72897522735061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d6f134fd653%3A0x51eb1d42c77222c2!2z44K144Oz44K344Oj44Kk44Oz44K344OG44Kj!5e0!3m2!1sja!2sjp!4v1761291276852!5m2!1sja!2sjp"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           </div>
         </section>
@@ -85,10 +95,6 @@
         <section class="to-menu">
           <a href="Menu.html">Menuはこちら</a>
         </section>
- 
-
-
-
 
       </main>
       <!---------------------------- 
