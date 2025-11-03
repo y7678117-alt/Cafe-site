@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  作成中
-</body>
-</html>
+  <html lang="ja">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="街角の隠れ家カフェ。木のぬくもりと香ばしいコーヒーの香りに包まれながらゆっくりと流れる時間をお楽しみください。">
+      <title>Cafeへようこそ</title>
+
+      <!-- リセットCSS -->
+      <link rel="stylesheet" href="assets/css/base.css">
+
+      <!-- メインCSS -->
+      <link rel="stylesheet" href="assets/css/style.css" />
+      <link rel="icon" href="assets/img/favicon.png" >
+
+      <!-- JS -->
+      <script src="assets/js/main.js" defer></script>
+    </head>
+
+    <body>
+      <!---------------------------- 
+        header
+      ------------------------------>
+      <header class="site-header" role="banner" aria-label="サイトヘッダー">
+        <h1 class="logo">
+          <a href="./index.html">
+            <img src="assets/img/logo.png" alt="Cafe" loading="lazy">
+          </a>
+        </h1>
+        <nav class="nav-menu" aria-label="グローバルナビ">
+        <a href="./index.html">Top</a>
+        </nav>
+        <button class="hamburger" aria-label="メニューを開閉">
+            <span></span><span></span>
+        </button>
+      </header>
+
+      <!----------------------------
+        main  
+       ---------------------------->
+       <main>
+
+        <!---------------------------
+        メイン画像
+        ---------------------------->
+        <section class="mainvisual">
+         <img src="assets/img/cafe1.jpg" alt="木の外観が目印のCafeの外観" loading="lazy">
+        </section>
+
+        <!---------------------------
+        メニュー一覧
+        ----------------------------->
+        <section class="menu">
+          <h2 class="section-title">Menu</h2>
+          <div class="text">
+            <p class="description">
+              ここで味わう一杯は、<br>
+              素材の優しさをそのまま生かしたもの。<br>
+              無理に飾らず、自然体で美味しい。<br>
+              そんな”日常のご褒美"を目指しています。<br>
+
+              香ばしいコーヒー、すっきりとした紅茶、<br>
+              そして季節のジュースまで。<br>
+             「カラダと心にやさしいカフェ時間」をどうぞ。
+            </p>
+          </div>
+          <div class="flex">
+          <div class="img">
+            <img src="assets/img/icecoffee.png" alt="アイスコーヒー" loading="lazy">
+            <p>IceCoffee</p>
+          </div>
+          <div class="img2">
+            <img src="assets/img/hotcoffee.png" alt="ホットコーヒー" loading="lazy">
+            <p>HotCoffee</p>
+          </div>
+          <div class="img3">
+            <img src="assets/img/icetee.png" alt="アイスティー" loading="lazy">
+            <p>IceTee</p>
+          </div>
+          <div class="img4">
+            <img src="assets/img/cola.png" alt="コーラ" loading="lazy">
+            <p>Cola</p>
+          </div>
+          <div class="img5">
+            <img src="assets/img/milk.png" alt="ミルク" loading="lazy">
+            <p>Milk</p>
+          </div>
+          <div class="img6">
+            <img src="assets/img/orangejuice.png" alt="オレンジジュース" loading="lazy">
+            <p>OrangeJuice</p>
+          </div>
+          </div>
+        </section>
+
+        
+
+        <!---------------------------
+         アクセスはこちら
+        ---------------------------->
+        <section class="to-go">
+          <a href="./index.html#access">アクセスはこちら</a>
+        </section>
+
+      </main>
+      <!---------------------------- 
+        footer
+      ------------------------------>
+      <footer class="site-footer" role="contentinfo" aria-label="サイトフッター">
+        <div class="footer-inner">
+          <small>&copy; 2025 Cafe Inc.</small>
+        </div>
+      </footer>
+    </body>
+  </html>

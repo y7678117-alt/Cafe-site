@@ -5,6 +5,7 @@
 *****************************/
 html {
   font-size: 100%;
+  font-weight: bold;
 }
 a {
   color: #ff8c00;             
@@ -18,7 +19,6 @@ a:hover {
 .text {
   margin-top: 150px;
   font-size: 1.2rem;
-  font-weight: bold;
 }
 
 /*****************************
@@ -100,7 +100,7 @@ body {
 /*******************************
 見出しのスタイル
 ********************************/
-.welcome, .access {
+.welcome,  .access, .menu {
   text-align: center;
   margin-top: 80px;
 }
@@ -155,24 +155,41 @@ Googleマップのスタイル
 }
 
 /*******************************
-Menuへ移動するボタンのスタイル
+Menu、アクセスへ移動するボタンのスタイル
 ********************************/
-.to-menu {
+.to-go {
   text-align: center;
   margin-top: 200px;
 }
+
+/*******************************
+Menuのスタイル
+*********************************/
+.menu .text {
+  margin-top: 0px;
+}
+.menu .flex {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  margin: 50px;
+}
+.menu .flex>div {
+  flex-basis: 30%;
+}
+
 
 /*-----------------------------
 スマートフォン
 -------------------------------*/
 @media screen and (max-width: 767px){
-  header {
+    header {
     flex-direction: row;
     align-items: center;
     gap: 20px;
     position: static;
   }
-  nav  {
+   nav  {
     display: none; 
     flex-direction: column;
     background: #fff;
@@ -245,10 +262,13 @@ Menuへ移動するボタンのスタイル
   height: 0;         
   padding-top: 70%;  
   }
-  .to-menu {
+  .menu .flex {
+  margin: 0px;
+  }
+  .to-go {
     margin-top: 100px;
   }
-  .to-menu a {
+  .to-go a {
     font-size: 1.5rem;
   }
   .footer-inner {
